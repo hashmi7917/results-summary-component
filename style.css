@@ -79,13 +79,13 @@ p {
 }
 
 .results {
-  height: 375px;
+  height: 350px;
   width: 100%;
   max-width: 375px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   background: linear-gradient(
     var(--light-slate-blue-background),
     var(--light-royal-blue-background)
@@ -93,7 +93,6 @@ p {
   text-align: center;
   color: var(--white);
   border-radius: 0 0 32px 32px;
-  padding-bottom: 12px;
 }
 
 .results > h4 {
@@ -204,4 +203,10 @@ p {
   border-radius: 32px;
   border-style: none;
   font-size: 16px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn:hover {
+  transform: scale(1.01);
+  transition: all 0.1s ease-in-out;
 }
