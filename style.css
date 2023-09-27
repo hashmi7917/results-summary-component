@@ -198,7 +198,6 @@ p {
 }
 
 .btn {
-  max-width: 245px;
   background-color: var(--dark-grey-blue);
   width: 100%;
   color: var(--white);

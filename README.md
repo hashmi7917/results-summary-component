@@ -30,6 +30,10 @@ Users should be able to:
 
 ### Screenshot
 
+#Mobile
+![Screenshot 2023-09-27 at 3 22 31 PM](https://github.com/hashmi7917/results-summary-component/assets/38833326/77d046a7-4864-4b04-876c-048816cfa69c)
+
+#Desktop
 ![](![Screenshot 2023-09-27 at 3 13 08 PM](https://github.com/hashmi7917/results-summary-component/assets/38833326/1c42d418-57c2-4455-a19a-e313adb04654))
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
