@@ -47,8 +47,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/hashmi7917/results-summary-component)
-- Live Site URL: [Add live site URL here](https://results-summary-card-componnet.netlify.app/)
+- Solution URL: [Github](https://github.com/hashmi7917/results-summary-component)
+- Live Site URL: [Netlify](https://results-summary-card-componnet.netlify.app/)
 
 ## My process
 
