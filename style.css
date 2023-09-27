@@ -48,8 +48,7 @@
 body {
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: 18px;
-  /* - Weights: 500, 700, 800 */
-  max-width: 375px;
+  /* max-width: 375px; */
   margin: 0 auto;
 }
 
@@ -145,7 +144,7 @@ p {
 }
 
 .summary > h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--dark-grey-blue);
 }
@@ -209,12 +208,16 @@ p {
 }
 
 .btn:hover {
-  transform: scale(1.01);
+  transform: scale(1.09);
   transition: all 0.2s ease-in-out;
 }
 
 .btn:active {
-  background-color: var(--violet-blue-circle);
+  background-image: linear-gradient(
+    var(--light-slate-blue-background),
+    var(--light-royal-blue-background)
+  );
+  cursor: pointer;
 }
 
 .attribution {
@@ -261,9 +264,11 @@ p {
   }
 
   .circle:hover {
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
     background: linear-gradient(
       var(--light-slate-blue-background),
-      var(--persian-blue-circle)
+      var(--cobalt-blue)
     );
   }
 
@@ -277,7 +282,7 @@ p {
   }
 
   .summary h4 {
-    font-size: 15px;
+    font-size: 20px;
     align-self: baseline;
   }
 
@@ -294,7 +299,7 @@ p {
   }
 
   .stats > h6 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     padding-left: 12px;
   }
