@@ -46,8 +46,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/hashmi7917/results-summary-component)
+- Live Site URL: [Add live site URL here](https://results-summary-card-componnet.netlify.app/)
 
 ## My process
 
@@ -56,63 +56,462 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- SCSS
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Flexbox, CSS Custom Properties, Layout, Block Sizes
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <section>
+      <main class="container">
+        <div class="results">
+          <p>Your Result</p>
+          <div class="circle">
+            <h1>76</h1>
+            <span>of 100</span>
+          </div>
+          <h4>Great</h4>
+          <p class="resuslt-info">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <div class="summary">
+          <h4>Summary</h4>
+          <div class="cards">
+            <div class="cardDetail red">
+              <div class="stats">
+                <span
+                  ><img src="./assets/images/icon-reaction.svg" alt="reaction"
+                /></span>
+                <h6>Reaction</h6>
+              </div>
+              <div class="score">
+                <p>80 <span>/ 100</span></p>
+              </div>
+            </div>
+            <div class="cardDetail yellow">
+              <div class="stats">
+                <span
+                  ><img src="./assets/images/icon-memory.svg" alt="reaction"
+                /></span>
+                <h6>Memory</h6>
+              </div>
+              <div class="score">
+                <p>92 <span>/ 100</span></p>
+              </div>
+            </div>
+            <div class="cardDetail teal">
+              <div class="stats">
+                <span
+                  ><img src="./assets/images/icon-verbal.svg" alt="reaction"
+                /></span>
+                <h6>Verbal</h6>
+              </div>
+              <div class="score">
+                <p>61 <span>/ 100</span></p>
+              </div>
+            </div>
+            <div class="cardDetail blue">
+              <div class="stats">
+                <span
+                  ><img src="./assets/images/icon-visual.svg" alt="reaction"
+                /></span>
+                <h6>Visual</h6>
+              </div>
+              <div class="score">
+                <p>72 <span>/ 100</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="btnBox">
+            <button class="btn">Continue</button>
+          </div>
+        </div>
+      </main>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/hashmi7917">hashmi7917</a
+        >.
+      </div>
+    </section>
+  </body>
+</html>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap');
+
+:root {
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --light-slate-blue-background: hsl(252, 100%, 67%);
+  --light-royal-blue-background: hsl(241, 81%, 54%);
+  --violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-grey-blue: hsl(224, 30%, 27%);
+}
+
+.red {
+  background-color: hsla(0, 100%, 67%, 0.05);
+  color: var(--light-red);
+}
+.yellow {
+  background-color: hsla(39, 100%, 56%, 0.05);
+  color: var(--orange-yellow);
+}
+.teal {
+  background-color: hsla(166, 100%, 39%, 0.05);
+  color: var(--green-teal);
+}
+.blue {
+  background-color: hsla(234, 85%, 45%, 0.05);
+  color: var(--cobalt-blue);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 18px;
+  /* - Weights: 500, 700, 800 */
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 800;
+}
+
+p {
+  color: var(--light-lavender);
+}
+
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 32px;
+}
+
+.results {
+  height: 350px;
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* padding: 10px 0; */
+  background: linear-gradient(
+    var(--light-slate-blue-background),
+    var(--light-royal-blue-background)
+  );
+  text-align: center;
+  color: var(--white);
+  border-radius: 0 0 32px 32px;
+}
+
+.results > h4 {
+  font-size: 24px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.resuslt-info {
+  width: 100%;
+  max-width: 70%;
+  align-self: center;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.results:nth-child(1) {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(
+    var(--violet-blue-circle),
+    var(--persian-blue-circle)
+  );
+  align-self: center;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circle > span {
+  color: hsla(252, 100%, 70%, 0.9);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.summary {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-right: 10px;
+}
+
+.summary > h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-grey-blue);
+}
+
+/* .cards {
+  padding: 20px;
+} */
+.cards {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 20px; */
+}
+
+.cardDetail {
+  width: 100%;
+  min-width: 325px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats img {
+}
+
+.stats > h6 {
+  font-size: 15px;
+  font-weight: lighter;
+  padding-left: 12px;
+}
+
+.score p {
+  font-size: 16px;
+  color: var(--dark-grey-blue);
+  font-weight: 800;
+}
+
+.score p span {
+  color: var(--dark-grey-blue);
+  font-weight: 100;
+}
+
+.btn {
+  background-color: var(--dark-grey-blue);
+  width: 100%;
+  color: var(--white);
+  padding: 20px 30px;
+  border-radius: 32px;
+  border-style: none;
+  font-size: 16px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn:hover {
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:active {
+  background-color: var(--violet-blue-circle);
+}
+
+.attribution {
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* for large devices media queries*/
+@media screen and (min-width: 750px) {
+  body {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 525px;
+    height: 350px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+
+  .results {
+    max-width: 250px;
+    border-radius: 32px;
+  }
+
+  .resuslt-info {
+    font-size: 12px;
+  }
+
+  .results:first-child {
+    font-size: 14px;
+  }
+
+  .circle:hover {
+    background: linear-gradient(
+      var(--light-slate-blue-background),
+      var(--persian-blue-circle)
+    );
+  }
+
+  .summary {
+    height: 100%;
+    /* max-width: 250px; */
+    max-height: 320px;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 25px;
+  }
+
+  .summary h4 {
+    font-size: 15px;
+    align-self: baseline;
+  }
+
+  .cards {
+    max-height: 220px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .cardDetail {
+    min-width: 220px;
+    padding: 10px 6px;
+    justify-content: space-between;
+    border-radius: 8px;
+  }
+
+  .stats > h6 {
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 12px;
+  }
+
+  .score p {
+    font-size: 14px;
+    color: var(--dark-grey-blue);
+    font-weight: 800;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btnBox {
+    width: 100%;
+    max-width: 245px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container,
+  .results,
+  .cards,
+  .cardDetail,
+  .summary {
+    min-width: 80%;
+  }
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Flexbox, Grids, Bootstrap, Styled Components
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Example resource 1](https://getcssscan.com/css-box-shadow-examples) - This helped me for BOX Shadow CSS. I really liked this pattern and will use it going forward.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Muqtadeer](https://github.com/hashmi7917)
+- Frontend Mentor - [@hahsmi7917](https://www.frontendmentor.io/profile/hashmi7917)
+- Instagram - [@yourusername](https://www.instagram.com/hashmi.developer)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thanks To Frontend Mentor Community For Providing this Challenges
